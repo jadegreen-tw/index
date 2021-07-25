@@ -25,7 +25,8 @@
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -37,12 +38,39 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+ 
 </head>
 
 <body>
+<!-- Messenger 洽談外掛程式 Code -->
+    <div id="fb-root"></div>
 
-  <!-- header section strats -->
+    <!-- Your 洽談外掛程式 code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "699937643456049");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+	
+  <!-- 網站頁首 -->
   <header class="header_section">
     <div class="container">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -76,106 +104,35 @@
       </nav>
     </div>
   </header>
-  <!-- end header section -->
-  <!-- slider section -->
-  <section class="slider_section ">
-    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container ">
-            <div class="row">
-              <div class="col-md-6 col-lg-5">
-                <div class="detail-box">
-                  <h1>
-                    買得安心 <br>
-                    三代水果老店
-                  </h1>
-                  <p>
-                    民國四十年代，台北的馬路上還看不到多少汽車，在淡水的鄉村小道，祖父駕著一輛鐵牛，穿梭在野阡陌間...</p>
-                  <div class="btn-box">
-                    <a href="about.html" class="btn-1">
-                      閱讀更多
-                    </a>
-                    <a href="https://lin.ee/yWfRitS" class="btn-2">
-                      聯絡我們
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-7">
-                <div class="img-box">
-                  <img src="images/slider-img.png" alt="">
-                </div>
-              </div>
-            </div>
+  <!-- 網站頁首 -->
+	
+<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+  </ol>
+	  <div class="carousel-inner" role="listbox">
+		  
+		 <!--我是第一行背景圖-->
+	    <div class="carousel-item active"><div class="d-flex justify-content-center"><img class="d-block mx-auto" src="images/banner/1.png" alt="First slide"></div>
+	      <div class="carousel-caption">
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="container ">
-            <div class="row">
-              <div class="col-md-6 col-lg-5">
-                <div class="detail-box">
-                  <h1>
-                    防疫期間 <br>
-                    有拉拉快送服務您
-                  </h1>
-                  <p>
-                    我們每日都會更新菜單在官方 LINE 上面，請加入官方帳號，隨時接收特價資訊喔！ </p>
-                  <div class="btn-box">
-                    <a href="lala_menu.html" class="btn-1">
-                      立即訂購
-                    </a>
-                    <a href="https://lin.ee/yWfRitS" class="btn-2">
-                      加入 LINE 詢問
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-7">
-                <div class="img-box">
-                  <img src="images/slider-img2.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
+		  
+		<!--我是第二行背景圖-->
+	    <div class="carousel-item"> <div class="d-flex justify-content-center"><img class="d-block mx-auto" src="images/banner/1.png" alt="Second slide"></div>
         </div>
-        <div class="carousel-item">
-          <div class="container ">
-            <div class="row">
-              <div class="col-md-6 col-lg-5">
-                <div class="detail-box">
-                  <h1>
-                    用心經營 <br>
-                    品質安心有保障
-                  </h1>
-                  <p>
-                    親切的服務態度、禮籃/禮盒客製服務、進口水管販售，您需要的在翡翠綠都找的到。 </p>
-                  <div class="btn-box">
-                    <a href="https://lin.ee/yWfRitS" class="btn-1">
-                      聯絡我們
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-7">
-                <div class="img-box">
-                  <img src="images/slider-img3.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
+		
+		<!--我是第三行背景圖-->
+	    <div class="carousel-item"> <div class="d-flex justify-content-center"><img class="d-block mx-auto" src="images/banner/1.png" alt="Third slide"></div>
         </div>
-      </div>
-      <ol class="carousel-indicators">
-        <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-        <li data-target="#customCarousel1" data-slide-to="1"></li>
-        <li data-target="#customCarousel1" data-slide-to="2"></li>
-      </ol>
-    </div>
-  </section>
-  <!-- end slider section -->
- <!-- offer section -->
+  </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
 
+
+ <!-- 商品展示區 -->
+<br>
   <section class="offer_section">
     <div class="container-fluid">
       <div class="row">
@@ -220,9 +177,9 @@
     </div>
   </section>
 
-  <!-- end offer section -->
+  <!-- 商品展示區 -->
 
-<!-- about section -->
+<!-- 拉拉快送區 -->
 
   <section class="about_section layout_padding">
     <div class="container  ">
@@ -251,11 +208,11 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
+	 
+<!-- 拉拉快送區 -->
 
-  <!-- end about section -->
-
-  <!-- info section -->
+  <!-- 關於我們 -->
 
   <section class="info_section ">
     <div class="info_container ">
@@ -310,7 +267,7 @@
           </a>
         </div>
         <div class="social-box">
-          <a href="">
+          <a href="https://www.facebook.com/jadegreentamsui">
             <i class="fa fa-facebook" aria-hidden="true"></i>
           </a>
           <a href="">
@@ -327,9 +284,9 @@
     </div>
   </section>
 
-  <!-- end info section -->
+  <!-- 關於我們 -->
 
-  <!-- footer section -->
+  <!-- 網站頁腳 -->
   <footer class="footer_section">
     <div class="container">
       <p>
@@ -337,12 +294,17 @@
       </p>
     </div>
   </footer>
-  <!-- footer section -->
+  <!-- 網站頁腳 -->
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/popper.min.js"></script>
+<!-- bootstrap js -->
+  <!-- <script src="js/bootstrap.js"></script> -->
+  <script src="js/bootstrap-4.4.1.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <!-- Google Map -->
